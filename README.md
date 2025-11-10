@@ -1,4 +1,6 @@
 
+![img](https://github.com/sebvillacorta/Win11-Optimization-Toolkit/blob/main/Screenshot%202025-11-10%20152006.png?raw=true)
+
 <div align="center">
     
 # Win11-Optimization-Toolkit
