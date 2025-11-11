@@ -42,6 +42,7 @@ Como profesional enfocado en System Optimization y SysAdmin, creo que un sistema
     Crea un Punto de Restauración del Sistema.
     
 ## COMO hacer un punto de restauracion tengo una repo explicando como hacer tu punto de resturacion en window11 
+
     Revisa el código de los scripts (.ps1, .bat) para entender completamente qué modificaciones se aplicarán.
 
 
