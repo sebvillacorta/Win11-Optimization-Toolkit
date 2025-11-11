@@ -39,21 +39,38 @@ Como profesional enfocado en System Optimization y SysAdmin, creo que un sistema
 
 ## Antes de ejecutar cualquier script o aplicar cualquier ajuste manual:
 
-    Crea un Punto de Restauración del Sistema.
+### Requisitos Previos: Activar la Protección del Sistema 
+
+Si la protección del sistema no está activada, no podrás crear puntos de restauración. 
+
+En la barra de búsqueda de Windows, escribe "crear un punto de restauración" y haz clic en el resultado correspondiente para abrir la ventana Propiedades del sistema.
+
+En la pestaña "Protección del sistema", selecciona la unidad para la que deseas crear el punto de restauración (generalmente el Disco local (C:) donde está instalado el sistema operativo).
+
+     -Haz clic en el botón "Configurar".
+     -Selecciona la opción "Activar protección del sistema".
+     
+Opcionalmente, ajusta el "Uso máximo de espacio en disco" que se destinará a los puntos de restauración (un 5-10% suele ser suficiente). Una vez que se alcanza este límite, los puntos más antiguos se eliminan para dejar espacio a los nuevos.
+
+
+
+
+### Cómo Crear el Punto de Restauración Manualmente
+
+Una vez activada la protección del sistema, sigue estos pasos:
+
+En la misma ventana "Propiedades del sistema", en la pestaña "Protección del sistema", haz clic en el botón "Crear".
+Aparecerá una pequeña ventana pidiéndote que escribas un nombre o una descripción para el punto de restauración. Elige un nombre que te ayude a recordarlo fácilmente, como "Antes de instalar nuevo software" o la fecha actual.
+
+    -Haz clic en "Crear".
     
-## COMO hacer un punto de restauracion tengo una repo explicando como hacer tu punto de resturacion en window11 
+Windows comenzará a crear el punto de restauración. Este proceso puede tardar unos instantes.
+Cuando finalice, aparecerá un mensaje de confirmación indicando que 
 
-    Revisa el código de los scripts (.ps1, .bat) para entender completamente qué modificaciones se aplicarán.
+    -"El punto de restauración se creó correctamente".
+    -Haz clic en "Cerrar". 
 
-
-El uso de este repositorio es bajo tu propia responsabilidad.
-
-🛠️ Scripts de Automatización (PowerShell)
-
+Se recomienda crear un punto de restauración antes de realizar cambios importantes en el sistema, como instalar nuevos controladores o programas, para poder revertir fácilmente el sistema a un estado anterior si algo sale mal. 
 
 
-El directorio /Scripts contiene archivos de PowerShell diseñados para automatizar tareas repetitivas de optimización.
 
-1. Disable_Telemetry.ps1
-
-Este script se enfoca en la privacidad y el consumo de recursos al deshabilitar servicios, tareas programadas y entradas de registro relacionadas con la recopilación de datos y telemetría de Microsoft.
