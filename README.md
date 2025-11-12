@@ -70,7 +70,60 @@ Cuando finalice, aparecerá un mensaje de confirmación indicando que
     -"El punto de restauración se creó correctamente".
     -Haz clic en "Cerrar". 
 
-Se recomienda crear un punto de restauración antes de realizar cambios importantes en el sistema, como instalar nuevos controladores o programas, para poder revertir fácilmente el sistema a un estado anterior si algo sale mal. 
+**El uso de este repositorio es bajo tu propia responsabilidad.**
 
+## 🛠️ Scripts de Automatización (PowerShell)
 
+El directorio `/Scripts` contiene archivos de **PowerShell** diseñados para automatizar tareas repetitivas de optimización.
+
+### 1. `Disable_Telemetry.ps1`
+
+Este script se enfoca en la privacidad y el consumo de recursos al deshabilitar servicios, tareas programadas y entradas de registro relacionadas con la recopilación de datos y telemetría de Microsoft.
+
+| Objetivo | Detalle Técnico |
+| :--- | :--- |
+| **Servicios** | Detiene y deshabilita servicios como `DiagTrack` (Experiencia del usuario y telemetría conectada) y `dmwappushsvc` (Servicio de envío de WAP de administración de dispositivos). |
+| **Tareas Programadas** | Elimina tareas programadas que envían datos periódicamente a Microsoft. |
+| **Registro** | Aplica ajustes clave en `HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection` para bloquear la telemetría. |
+
+### 2. `Unnecessary_Apps_Removal.ps1`
+
+Un script de *debloating* para remover aplicaciones preinstaladas (bloatware) que generalmente no son esenciales y consumen espacio y memoria.
+
+* Utiliza `Get-AppxPackage` para identificar y remover aplicaciones como juegos, ciertas utilidades de Xbox o aplicaciones de medios.
+* **Nota:** Se excluyen aplicaciones críticas del sistema.
+
+### 3. `Performance_Power_Plan.ps1`
+
+Un script sencillo que asegura la configuración del plan de energía en **Alto Rendimiento** para portátiles y equipos de escritorio, maximizando la velocidad de la CPU.
+
+## ⚙️ Ajustes Manuales y Guías
+
+El directorio `/Manual_Tweaks` contiene documentación que detalla configuraciones de bajo nivel para usuarios avanzados. Estos ajustes se recomiendan hacer manualmente para garantizar la compatibilidad con tu hardware específico.
+
+### `Registry_Optimization.md`
+
+Guía paso a paso para la modificación del Registro que afecta directamente el rendimiento y la latencia del sistema:
+
+* **Ajustes de Prefetcher/Superfetch:** Cómo modificar el valor `EnablePrefetcher` y `EnableSuperfetch` para adaptar el comportamiento de caché a unidades SSD o HDD.
+* **Optimizaciones de red:** Tweaks en `TcpAckFrequency` y `DisableNagleAlgorithm` para mejorar la latencia en juegos o aplicaciones de alta respuesta (con precaución).
+
+### `Services_to_Disable.md`
+
+Una lista curada de servicios de Windows que pueden ser deshabilitados o configurados en **Manual** sin afectar la funcionalidad básica del sistema.
+
+* **Ejemplo:** Deshabilitar la función de fax si no se utiliza, o configurar Windows Search (`WSearch`) en manual si prefieres otras herramientas de indexación.
+
+## 💡 Cómo Contribuir
+
+Si encuentras más *tweaks* de rendimiento o tienes sugerencias para mejorar los scripts, ¡las contribuciones son bienvenidas! Por favor, abre un *issue* o envía un *pull request*.
+
+---
+
+## 👨‍💻 Mis Habilidades Demostradas
+
+* **System Optimization:** Conocimiento profundo para maximizar el rendimiento de Windows 11.
+* **Automation & Bash Scripting:** Uso de scripts de PowerShell para automatizar tareas complejas.
+* **SysAdmin / Server Configuration:** Aplicación de metodologías de *hardening* y gestión de servicios al entorno de escritorio.
+* **Git:** Uso de control de versiones para gestionar y documentar los cambios.
 
