@@ -117,7 +117,7 @@ Una lista curada de servicios de Windows que pueden ser deshabilitados o configu
 # Error de "No se puede cargar el archivo..." 
 ---
 
-![img](https://github.com/sebvillacorta/Win11-Optimization-Toolkit/blob/2107edb6d5ddf6debfbafafc0bfe626d838aa0c9/error%20de%20scripst.png)
+![img](https://github.com/sebvillacorta/Win11-Optimization-Toolkit/blob/396acd528aa5b3404947244773ad48e930a07d1a/dock/error%20de%20scripst.png)
 
 
 ## 🛡️ Solución: Modificar la Política de Ejecución
