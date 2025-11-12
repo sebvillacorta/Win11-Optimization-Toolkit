@@ -114,6 +114,47 @@ Una lista curada de servicios de Windows que pueden ser deshabilitados o configu
 
 * **Ejemplo:** Deshabilitar la función de fax si no se utiliza, o configurar Windows Search (`WSearch`) en manual si prefieres otras herramientas de indexación.
 
+# Error de "No se puede cargar el archivo..." 
+---
+## 🛡️ Solución: Modificar la Política de Ejecución
+
+Para permitir que tu script Disable_Telemetry.ps1 se ejecute, debes cambiar temporalmente la política de ejecución. Te recomiendo usar la política RemoteSigned, que es más segura que otras opciones porque solo permite scripts descargados de Internet si tienen una firma digital válida, pero permite ejecutar tus propios scripts creados localmente.
+
+### Sigue estos pasos ejecutando PowerShell como Administrador:
+
+# Paso 1: Verificar la Política Actual
+
+Escribe el siguiente comando para ver cuál es tu política actual (probablemente sea Restricted):
+PowerShell
+
+    Get-ExecutionPolicy
+
+# Paso 2: Cambiar la Política de Ejecución
+
+Ejecuta el siguiente comando para establecer la política en RemoteSigned:
+PowerShell
+
+    Set-ExecutionPolicy RemoteSigned -Scope Process
+
+# Explicación del Comando:
+
+    Set-ExecutionPolicy: Es el cmdlet para cambiar la política.
+    
+    RemoteSigned: Permite ejecutar tus scripts locales sin restricciones.
+
+    -Scope Process: ¡Clave de seguridad! Esto asegura que el cambio de política solo se aplique a la sesión de PowerShell actual y se      revierta a la política anterior automáticamente cuando cierres la ventana de PowerShell.
+    Shutterstock
+
+# Paso 3: Ejecutar el Script
+
+Ahora que la política de la sesión actual está configurada correctamente, puedes ejecutar los script sin problemas:
+PowerShell, provando el.
+
+    .\Disable_Telemetry.ps1
+
+Una vez que el script termine, puedes cerrar la ventana de PowerShell. La política de ejecución de tu sistema volverá a ser la que tenías originalmente (probablemente Restricted), manteniendo un buen nivel de seguridad para futuros scripts que puedas descargar.
+
+
 ## 💡 Cómo Contribuir
 
 Si encuentras más *tweaks* de rendimiento o tienes sugerencias para mejorar los scripts, ¡las contribuciones son bienvenidas! Por favor, abre un *issue* o envía un *pull request*.
