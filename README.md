@@ -116,6 +116,10 @@ Una lista curada de servicios de Windows que pueden ser deshabilitados o configu
 
 # Error de "No se puede cargar el archivo..." 
 ---
+
+![img](https://github.com/sebvillacorta/Win11-Optimization-Toolkit/blob/2107edb6d5ddf6debfbafafc0bfe626d838aa0c9/error%20de%20scripst.png)
+
+
 ## 🛡️ Solución: Modificar la Política de Ejecución
 
 Para permitir que tu script Disable_Telemetry.ps1 se ejecute, debes cambiar temporalmente la política de ejecución. Te recomiendo usar la política RemoteSigned, que es más segura que otras opciones porque solo permite scripts descargados de Internet si tienen una firma digital válida, pero permite ejecutar tus propios scripts creados localmente.
