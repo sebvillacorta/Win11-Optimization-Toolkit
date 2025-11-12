@@ -1,5 +1,5 @@
 
-![img](https://github.com/sebvillacorta/Win11-Optimization-Toolkit/blob/main/Screenshot%202025-11-10%20152006.png?raw=true)
+![img](https://github.com/sebvillacorta/Win11-Optimization-Toolkit/blob/7bfc29a4d53121bce6abbf01028aac74e778eeab/dock/Screenshot%202025-11-10%20152006.png)
 
 <div align="center">
     
